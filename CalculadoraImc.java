@@ -31,5 +31,20 @@ public class CalculadoraImc extends Application {
 			lblResultado.setText(String.format("Seu IMC é: %.2f", imc));
 		});
 
+		//Layout vertical
+		VBox layout = new VBox(10, lblPeso, campoPeso, lblAltura, campoAltura, btnCalcular, lblResultado);
+		layout.setPadding(new Insets(10));
+		layout.setAlignment(Pos.CENTER);
+
+		//Cena e palco
+		Scene cena = new Scene(layout, 300, 250);
+		palco.setTitle("Calculadora de IMC");
+		palco.setScene(cena);
+		palco.show();
+
 	};
+
+	public static void main(String[] args) {
+		launch(args);
+	}
 }
